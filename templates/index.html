@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search Page</title>
+    <!link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+<div class="content">
+    <h1 >Boston Housing Price - Linear Regression </h1>
+    <div class="form" >
+        <form action="/predict" method="POST">
+            <label>** values shown here in placeholder are median values ** </label><br/><br/>
+            <label>Per Capita Crime rate by town [CRIM]</label>
+            <input type="number" step="any" name="CRIM" id="CRIM"  value="0.25" ><br/>
+            <label>Proportion of residential land zoned for lots over 25,000 sq.ft.[ZN]</label>
+            <input type="number" step="any" name="ZN" id="ZN" value="0.0"><br/>
+            <label>Charles River dummy variable (= 1 if tract bounds river; 0 else)[CHAS]</label>
+            <input type="number" name="CHAS" id="CHAS" value="0"><br/>
+            <label>Nitric oxides concentration (parts per 10 million)[NOX]</label>
+            <input type="number" step="any" name="NOX" id="NOX" value="0.538"><br/>
+            <label>Average number of rooms per dwelling [RM]</label>
+            <input type="number" step="any" name="RM" id="RM" value="6.2"><br/>
+            <label>Weighted distances to five Boston employment centres [DIS]</label>
+            <input type="number" step="any" name="DIS" id="DIS" value="3.2"><br/>
+            <label>Index of accessibility to radial highways [RAD]</label>
+            <input type="number" step="any" name="RAD" id="RAD" value="5.0"><br/>
+            <label>Full-value property-tax rate per $10,000 [TAX]</label>
+            <input type="number" step="any" name="TAX" id="TAX" value="330"><br/>
+            <label>Pupil-teacher ratio by town [PTRATIO]</label>
+            <input type="number" step="any" name="PTRATIO" id="PTRATIO" value="19.05"><br/>
+            <label>1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town [B]</label>
+            <input type="number" step="any" name="B" id="B" p value="391.4"><br/>
+            <label>%Lower status of the population [LSTAT]</label>
+            <input type="number" step="any" name="LSTAT" id="LSTAT"  value="11.36"><br/>
+            <br/>
+            <input style="width:200px" type="submit" value="Predict">
+
+        </form>
+    </div>
+</div>
+</body>
+</html>
